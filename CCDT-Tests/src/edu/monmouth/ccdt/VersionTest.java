@@ -5,33 +5,40 @@ import static org.junit.Assert.*;
 import java.io.*;
 import java.util.*;
 
+import junit.framework.TestCase;
+
 import org.junit.Test;
 
+import edu.monmouth.ccdt.data.Change;
+import edu.monmouth.ccdt.data.File;
 import edu.monmouth.ccdt.data.Version;
 
+
 public class VersionTest {
-private int num = 1;
 
-java.io.File FileFolder = new java.io.File("test/");
-
-
-
+//Create to test the Versions through Change.
+java.io.File FileFolderCurr = new java.io.File("testRoot/test/");
+private int num = 2;
+private java.io.File FileFolderPrev = new java.io.File("testRoot/testDanPrevVer/");
+private int numPrev = 1;
+private java.io.File FileNew = new java.io.File("testRoot/test/test.txt");
 
 	@Test
 	public void testVersion() {
-	
-		Version testV = new Version(num, FileFolder );
-	
-		//Creating Tests for directory and number that was input into the constructor
-		File resultDir = testV.getDirectory();
-		File result2Dir = FileFolder;
-		int resultNumber = testV.getNumber();
-		int result2Number = num;
-	    
-		//Confirming number and Folder input in constructor matches created number and Folder in test
-		assertEquals(resultDir, result2Dir);
-		assertEquals(resultNumber, result2Number);
+		//Created a previous and current instance
+		Version testCurr = new Version(num, FileFolderCurr);
+		Version testPrev = new Version(numPrev, FileFolderPrev);
+		//Create a test file from Files
+		File testFiles = new File(FileNew);
+		//Add Versions and test files through Change to confirm it works.
+		Change testVersionsChange = new Change(testCurr,testPrev, testFiles );
 		
+		
+		
+		
+		
+
+
 		
 	}
 

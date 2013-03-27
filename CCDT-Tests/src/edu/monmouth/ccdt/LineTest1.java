@@ -24,6 +24,8 @@ public class LineTest1 {
 		assertEquals(lineResult, line2Result);
 		assertEquals(lineNumResult, lineNum2Result);
 		
+		//Expect no return just pass
+		
 		
 		
 		

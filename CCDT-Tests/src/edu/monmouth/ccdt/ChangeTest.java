@@ -30,7 +30,13 @@ public class ChangeTest {
 		Change testChanges = new Change(testVer,testVerPrev,testFiles);
 		//Confirming that testVer and testVerPrev are not the same
 		assertNotSame(testVer, testVerPrev);
-
+		
+		
+		
+		//Expect output return of our files test.txt from both Prev and Cur dir.
+        
+		
 	}
+
 
 }
