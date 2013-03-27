@@ -2,7 +2,8 @@ package edu.monmouth.ccdt;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
+import edu.monmouth.ccdt.data.File;
+
 import java.io.IOException;
 
 import org.junit.Test;
