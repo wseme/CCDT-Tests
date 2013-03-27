@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class FileTest {
 
-
+//creating a data file, null and image file
 java.io.File FileNew = new java.io.File("test/test.txt");
 java.io.File File2Null = new java.io.File("testDanNull/testNull.txt");
 java.io.File File3Jpeg = new java.io.File("test/Test.jpeg");

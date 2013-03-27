@@ -28,7 +28,8 @@ public class ChangeTest {
 		Version testVerPrev = new Version(numPrev, FileFolderPrev);
 		//Testing that the change constructor will successfully take the arguements ver, prev ver and file directory
 		Change testChanges = new Change(testVer,testVerPrev,testFiles);
-		
+		//Confirming that testVer and testVerPrev are not the same
+		assertNotSame(testVer, testVerPrev);
 
 	}
 
