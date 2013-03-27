@@ -12,10 +12,10 @@ import edu.monmouth.ccdt.data.Version;
 
 public class ChangeTest {
 	//Create the test file,folder and integer
-	private java.io.File FileNew = new java.io.File("test/test.txt");
-	private java.io.File FileFolder = new java.io.File("test/");
+	private java.io.File FileNew = new java.io.File("testRoot/test/test.txt");
+	private java.io.File FileFolder = new java.io.File("testRoot/test/");
 	//private java.io.File FileNew = new java.io.File("test/test.txt");
-	private java.io.File FileFolderPrev = new java.io.File("testDanPrevVer/");
+	private java.io.File FileFolderPrev = new java.io.File("testRoot/testDanPrevVer/");
 	private int num = 2;
 	private int numPrev = 1;
 	
