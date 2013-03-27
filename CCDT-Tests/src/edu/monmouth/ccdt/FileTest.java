@@ -1,10 +1,11 @@
 package edu.monmouth.ccdt;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
+
 
 import edu.monmouth.ccdt.data.File;
 
-import java.io.IOException;
+
 
 import org.junit.Test;
 
@@ -12,29 +13,25 @@ import org.junit.Test;
 
 public class FileTest {
 
-private String result2String;
 
 java.io.File FileNew = new java.io.File("test/test.txt");
-java.io.File File2New = new java.io.File("test/test.txt");
-
+java.io.File File2Null = new java.io.File("testDanNull/testNull.txt");
+java.io.File File3Jpeg = new java.io.File("test/Test.jpeg");
 
 @Test
 	public void testFile() {
+		//Testing inserting a file containing data and also inserting a Null File into the constructor
 		File testFiles = new File(FileNew);
+		File testFilesNull = new File(File2Null);
+		File testFilesJpeg = new File(File3Jpeg);
 		
-		//Creating Tests for file that was input into the constructor
-		String result = testFiles.getFileName();
+		assertNotSame(testFiles, testFilesNull);
+		assertNotSame(testFiles, testFilesJpeg);
 		
-		java.io.File result2 = File2New;
-		try {
-			this.result2String = result2.getCanonicalPath();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	     //Making sure that the file entered matches the file name that went into the program.
-		// assertEquals(result, this.result2String);
-        //The assertEquals worked with previous version of this but not currently this only tests that the constructor file can take a directory with file.
+		
+		
+		
+		
    }
 
 }
