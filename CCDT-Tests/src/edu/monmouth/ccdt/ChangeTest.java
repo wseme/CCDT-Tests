@@ -8,26 +8,26 @@ import edu.monmouth.ccdt.data.Change;
 import edu.monmouth.ccdt.data.File;
 import edu.monmouth.ccdt.data.Version;
 
+
+
 public class ChangeTest {
+	//Create the test file
+	private java.io.File FileNew = new java.io.File("test/test.txt");
+	java.io.File FileFolder = new java.io.File("test/");
+	private int num = 2;
+	private int numPrev = 1;
 	private Version previousVersion1;
 	private Version currentVersion1;
-	private File file1;
+	
 	
 	@Test
 	public void testChange() {
-		//Creating Tests for directory and number that was input into the constructor
-		//*****In order to get this to work the modifier needs to be changed on the private variable in Change
-		//Really just inputting the variables and making sure they are not altered going through the constructor.
-		Change testChange = new Change(previousVersion1,currentVersion1,file1);
-		//Version testPrev = testChange.previousVersion;
-		Version test2Prev = previousVersion1;
-		//Version testCurr = testChange.currentVersion;
-		Version test2Curr = currentVersion1;
-		//File testFile = testChange.file;
-        File test2File = file1;
-		//assertEquals(testPrev, test2Prev);
-		//assertEquals(testCurr, test2Curr);
-		//assertEquals(testFile, test2File);
+		File testFiles = new File(FileNew);
+		Version testVer = new Version(num, FileFolder);
+		Version testVerPrev = new Version(numPrev, FileFolder);
+		//Testing that the change constructor will successfully take the arguements ver, ver and file directory
+		Change testChanges = new Change(testVer,testVerPrev,testFiles);
+		
 
 	}
 
