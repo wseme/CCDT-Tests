@@ -13,7 +13,7 @@ public class FileTest {
 
 private String result2String;
 
-private java.io.File FileNew = new java.io.File("test/test.txt");
+java.io.File FileNew = new java.io.File("test/test.txt");
 
 
 @Test
