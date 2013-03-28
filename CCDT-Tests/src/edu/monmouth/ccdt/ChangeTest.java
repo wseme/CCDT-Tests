@@ -20,14 +20,16 @@ public class ChangeTest {
 	private int numPrev = 1;
 	
 	
+	File testFiles = new File(FileNew);
+	Version testVer = new Version(num, FileFolder);
+	Version testVerPrev = new Version(numPrev, FileFolderPrev);
+	//Testing that the change constructor will successfully take the arguements ver, prev ver and file directory
+	Change testChanges = new Change(testVer,testVerPrev,testFiles);
 	
 	@Test
 	public void testChange() {
-		File testFiles = new File(FileNew);
-		Version testVer = new Version(num, FileFolder);
-		Version testVerPrev = new Version(numPrev, FileFolderPrev);
-		//Testing that the change constructor will successfully take the arguements ver, prev ver and file directory
-		Change testChanges = new Change(testVer,testVerPrev,testFiles);
+
+		
 		//Confirming that testVer and testVerPrev are not the same
 		assertNotSame(testVer, testVerPrev);
 		
@@ -37,6 +39,9 @@ public class ChangeTest {
         
 		
 	}
-
-
+public Change getChangeTest(){
+	return testChanges;
+	
+}
+	
 }

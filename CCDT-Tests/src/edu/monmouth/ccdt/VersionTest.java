@@ -28,18 +28,14 @@ private java.io.File FileNew = new java.io.File("testRoot/test/test.txt");
 		//Created a previous and current instance
 		Version testCurr = new Version(num, FileFolderCurr);
 		Version testPrev = new Version(numPrev, FileFolderPrev);
-		//Create a test file from Files
+		//Create a test file from Files class
 		File testFiles = new File(FileNew);
 		//Add Versions and test files through Change to confirm it works.
 		Change testVersionsChange = new Change(testCurr,testPrev, testFiles );
-		
-		
-		
-		
-		
-
-
+		//Create an object from ChangeTest and get it to compare with created test in this class
+		ChangeTest changeCompare = new ChangeTest();
+		Change testOutput = changeCompare.getChangeTest();
+		//The outputs should match between the two and print test four times
 		
 	}
-
 }
