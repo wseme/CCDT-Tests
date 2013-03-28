@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import edu.monmouth.ccdt.data.Line;
 
-public class LineTest1 {
+public class LineTest {
 
 	@Test
 	public void testLine() {

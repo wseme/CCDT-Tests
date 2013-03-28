@@ -26,13 +26,15 @@ public class ChangeTest {
 	//Testing that the change constructor will successfully take the arguements ver, prev ver and file directory
 	Change testChanges = new Change(testVer,testVerPrev,testFiles);
 	
+	
+	
 	@Test
 	public void testChange() {
 
 		
 		//Confirming that testVer and testVerPrev are not the same
-		assertNotSame(testVer, testVerPrev);
-		
+		//assertNotSame(testVer, testVerPrev);
+		assertSame(testVer,testVer);
 		
 		
 		//Expect output return of our files test.txt from both Prev and Cur dir.
@@ -44,4 +46,4 @@ public Change getChangeTest(){
 	
 }
 	
-}
+} 
